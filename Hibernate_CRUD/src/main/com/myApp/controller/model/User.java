@@ -3,6 +3,10 @@ package main.com.myApp.controller.model;
 
 import lombok.*;
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -23,11 +27,21 @@ public class User {
     @Column(name="password")
     private String password;
 
+    @Column(name = "birth_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date birth_date;
 
-    public User(int id, String username, String password) {
-        Id = id;
+    @Transient
+    private SimpleDateFormat simpleDateFormat;
+
+    public User(String username, String password, Date birth_date)throws ParseException {
         this.username = username;
         this.password = password;
+        this.birth_date = birth_date;
+        simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        this.birth_date = simpleDateFormat.parse(String.valueOf(birth_date));
+        Timestamp timestamp = new Timestamp(birth_date.getTime());
+
     }
 }
 

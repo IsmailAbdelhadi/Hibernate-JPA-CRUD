@@ -19,28 +19,27 @@ public class Main
 
         try {
 
-            //---------UserModel CRUD using Hibernate---------------------------------------------
+            //---------User CRUD using Hibernate---------------------------------------------
             //Create guest object
-            User user = new User(2 ,"ali","password");
+            //User user = new User(2 ,"ali","password");
 
             //open the transaction
-            session.beginTransaction();
+            //session.beginTransaction();
 
             //save object into table
-             session.save(user);
+            //session.save(user);
 
             //retrieve object from database
-            User user1 = session.get(User.class , 1);
-            System.out.println(user);
+            //User user1 = session.get(User.class , 1);
+            //System.out.println(user);
 
             //update the object
-            user.setPassword("HII9966");
+            //user.setPassword("HII9966");
 
             //delete the object
-            session.delete(user);
+            //session.delete(user);
 
-            //commit the changes
-            session.getTransaction().commit();
+
 
 
 
@@ -85,6 +84,9 @@ public class Main
             //List<ProductModel> productList = query.getResultList();
             //for(Object product : productList)
             //System.out.println(product);
+
+            //commit the changes
+            session.getTransaction().commit();
         }catch (Exception exception)
         {
             exception.printStackTrace();

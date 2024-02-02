@@ -5,7 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ProductModel {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="product_id")
@@ -33,7 +33,7 @@ public class ProductModel {
     private SimpleDateFormat simpleDateFormat;
 
 
-    public ProductModel(int product_id, String product_name, String description, double price, int stock_quantity, String manufacturer, Date production_date) throws ParseException {
+    public Product(int product_id, String product_name, String description, double price, int stock_quantity, String manufacturer, Date production_date) throws ParseException {
         this.product_id = product_id;
         this.product_name = product_name;
         this.description = description;
