@@ -2,7 +2,6 @@ package main.com.myApp.controller.model;
 
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @Entity
@@ -23,6 +22,7 @@ public class User {
 
     @Column(name="password")
     private String password;
+
 
     public User(int id, String username, String password) {
         Id = id;
