@@ -85,6 +85,31 @@ public class Main
             //for(Object product : productList)
             //System.out.println(product);
 
+
+
+            //----------OneToOne Relation-------------------------------------
+            //Passport passport = new Passport("A340E39","2024-01-15");
+            //Person person = new Person("Ali","ismail","2024-01-02");
+
+            //passport.setPerson(person);
+
+            //save object into table
+            //session.save(passport);
+            //System.out.println(passport);
+            //System.out.println(person);
+
+            //retrieve object from database
+            //Passport passport1 = session.get(Passport.class , 1);
+            //System.out.println(passport1);
+            //System.out.println(passport1.getPerson());
+
+            //Person person1 = session.get(Person.class,1);
+            //System.out.println(person1.getFirst_name()+ "  " +person1.getLast_name());
+
+            //print the associated passport
+            //Passport passport2 = person1.getPassport();
+            //System.out.println(passport2);
+
             //commit the changes
             session.getTransaction().commit();
         }catch (Exception exception)
