@@ -110,6 +110,8 @@ public class Main
             //Passport passport2 = person1.getPassport();
             //System.out.println(passport2);
 
+
+
             //commit the changes
             session.getTransaction().commit();
         }catch (Exception exception)
