@@ -128,6 +128,26 @@ public class Main
             //save Question and its answers
             //session.save(question);
 
+            //----------OneToMany Relation bi direction-------------------------------------
+            //define Instructor object
+            //Instructor instructor = new Instructor("Instructor Shohdy");
+            //define objects of Courses
+            //Course course1 = new Course("Course 1");
+            //Course course2 = new Course("Course 2");
+            //Course course3 = new Course("Course 3");
+
+            //instructor.addCourse(course1);
+            //instructor.addCourse(course2);
+            //instructor.addCourse(course3);
+
+            //save Instructor and its courses
+            //session.persist(instructor);
+
+            //get instructor object
+//            int id = 1;
+//            Instructor instructor = session.get(Instructor.class,id);
+//            System.out.println(instructor);
+
 
             //commit the changes
             session.getTransaction().commit();
