@@ -12,6 +12,7 @@ public class Main
         SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate-config.xml")
                 .addAnnotatedClass(User.class)
+                .addAnnotatedClass(User.class)
                 .buildSessionFactory();
 
         //define session
@@ -46,8 +47,8 @@ public class Main
 
             //------------Products using ProductModel & HQL-------------------------------------------
             //Create Product object
-            //UserModel user = new UserModel("sherif","password",new Date());
-            //ProductModel product = new ProductModel("samsung s23","mobile_phone",24500.0,4,"china","2023-08-04");
+            //User user = new User("sherif","password",new Date());
+            //Product product = new Product("samsung s23","mobile_phone",24500.0,4,"china","2023-08-04");
 
             //save object into table
             //session.save(user);
@@ -110,6 +111,22 @@ public class Main
             //Passport passport2 = person1.getPassport();
             //System.out.println(passport2);
 
+
+            //----------OneToMany Relation uni direction-------------------------------------
+            //define Question object
+            //Question question = new Question("Question 1");
+
+            //define List of Answers
+            //List<Answer> answers = new ArrayList<>();
+            //add answers into the list
+            //Collections.addAll(answers,
+            //new Answer("Question 1 first answer"),
+            //new Answer("Question 1 second answer"),
+            //new Answer("Question 1 third answer"));
+            //question.setAnswers(answers);
+
+            //save Question and its answers
+            //session.save(question);
 
 
             //commit the changes
