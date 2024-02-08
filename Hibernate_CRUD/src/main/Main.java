@@ -149,6 +149,34 @@ public class Main
 //            System.out.println(instructor);
 
 
+            //----------ManyToMany Relation-------------------------------------
+            //define courses objects
+            //Courses courses1 = new Courses("Math");
+            //Courses courses2 = new Courses("CS");
+
+
+            //define students objects
+            //Student student1 = new Student("Ali");
+            //Student student2 = new Student("Sherif");
+
+            //add students to courses
+            //courses1.addStudent(student1);
+            //courses2.addStudent(student1);
+            //courses2.addStudent(student2);
+
+            //save the courses
+            //session.persist(courses1);
+            //session.persist(courses2);
+
+            //get the student from the database
+            //Student tempStudent = session.get(Student.class,1);
+
+            //print the student data
+            //System.out.println("student data: "+tempStudent.getStudentName());
+            //System.out.println("courses related to student: "+tempStudent.getCourses());
+
+
+
             //commit the changes
             session.getTransaction().commit();
         }catch (Exception exception)
